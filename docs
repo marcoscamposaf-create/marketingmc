@@ -1,2 +1,12 @@
 mkdir docs
 cp index.html style.css script.js supabase.js formulario.html dashboard.html relatorio.html docs/
+
+
+# No seu terminal, na raiz do projeto
+cd docs
+echo > .nojekyll
+cd ..
+
+git add docs/.nojekyll
+git commit -m "Add: .nojekyll"
+git push
