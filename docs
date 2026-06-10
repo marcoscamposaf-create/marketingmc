@@ -1,0 +1,2 @@
+mkdir docs
+cp index.html style.css script.js supabase.js formulario.html dashboard.html relatorio.html docs/
