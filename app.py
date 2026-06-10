@@ -360,7 +360,7 @@ elif page == "📋 Diagnóstico":
         ["Sim", "Parcialmente", "Não"],
         index=["Sim", "Parcialmente", "Não"].index(form_data.get("usa_ia_automacao", "Não"))
     )
-    form_data["processos_automatizar"] = st.text_area("Quais processos poderiam ser automatizados?", value=form_data.get("processos_automatizar", ""), height=60)
+    form_data["processos_automatizar"] = st.text_area("Quais processos poderiam ser automatizados?", value=form_data.get("processos_automatizar", ""), height=100)
     
     # ---- BLOCO 7 ----
     st.markdown("### 7️⃣ Objetivos Estratégicos")
