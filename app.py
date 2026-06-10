@@ -346,7 +346,7 @@ elif page == "📋 Diagnóstico":
         ["Sim", "Parcialmente", "Não"],
         index=["Sim", "Parcialmente", "Não"].index(form_data.get("resultados_mensuraveis", "Não"))
     )
-    form_data["desafios_marketing"] = st.text_area("Principais desafios de marketing", value=form_data.get("desafios_marketing", ""), height=10)
+    form_data["desafios_marketing"] = st.text_area("Principais desafios de marketing", value=form_data.get("desafios_marketing", ""), height=100)
     
     # ---- BLOCO 6 ----
     st.markdown("### 6️⃣ Tecnologia e Inovação")
