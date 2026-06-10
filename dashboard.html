@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard Executivo · MC Associados</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="brand">
+        <span class="brand__mark">MC</span>
+        <span><span class="brand__name">MC Associados</span><br /><span class="brand__sub">Consultoria Contábil & Tributária</span></span>
+      </a>
+      <nav class="nav__links" id="navLinks">
+        <a href="index.html">Início</a>
+        <a href="formulario.html">Diagnóstico</a>
+        <a href="dashboard.html" class="is-active">Dashboard</a>
+        <a href="relatorio.html">Relatório</a>
+      </nav>
+      <button class="nav__toggle" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <div id="dashRoot">
+    <!-- Cabeçalho -->
+    <div class="page-head">
+      <div class="page-head__inner">
+        <div>
+          <p class="eyebrow on-dark">Visão executiva</p>
+          <h1>Dashboard de Maturidade</h1>
+          <p>Indicadores e gráficos consolidados do diagnóstico estratégico · Fonte de dados: <b id="modeTag">—</b></p>
+        </div>
+        <div class="page-head__actions">
+          <a href="relatorio.html" class="btn btn--gold">Abrir relatório</a>
+          <a href="formulario.html" class="btn btn--light">Nova resposta</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Estado vazio -->
+    <div class="empty" id="dashEmpty" style="display:none">
+      <h2>Ainda não há respostas</h2>
+      <p>Assim que o primeiro diagnóstico for preenchido, os indicadores aparecem aqui.</p>
+      <p style="margin-top:18px"><a href="formulario.html" class="btn btn--primary">Preencher diagnóstico</a></p>
+    </div>
+
+    <div id="dashContent">
+      <!-- Seletor de respondente -->
+      <div class="respbar">
+        <div class="respbar__inner">
+          <label for="respSelect">Recorte da análise</label>
+          <select class="input" id="respSelect" style="width:auto"></select>
+          <span style="font-size:12.5px;color:var(--gray-400)">Indicadores e score seguem o recorte; gráficos são consolidados de todas as respostas.</span>
+        </div>
+      </div>
+
+      <div class="dash">
+        <!-- Score + pilares -->
+        <div class="scorepanel">
+          <div class="scorecard">
+            <h3>Índice de Maturidade</h3>
+            <div class="scorecard__gauge"><div id="scoreGauge"></div></div>
+            <span class="scorecard__band" id="scoreBand">—</span>
+          </div>
+          <div class="panel">
+            <div class="panel__title"><h3>Pilares de maturidade</h3><span class="badge">0 – 100 por pilar</span></div>
+            <div class="pillars" id="pillars"></div>
+          </div>
+        </div>
+
+        <!-- KPIs -->
+        <div class="kpis" id="kpis"></div>
+
+        <!-- Gráficos -->
+        <div class="charts">
+          <div class="chartcard">
+            <h3>Canais digitais utilizados</h3>
+            <p>Frequência de uso declarada pelos respondentes.</p>
+            <div class="chartcard__canvas"><canvas id="chCanais"></canvas></div>
+          </div>
+          <div class="chartcard">
+            <h3>Origem dos clientes</h3>
+            <p>Como os clientes chegam à empresa hoje.</p>
+            <div class="chartcard__canvas"><canvas id="chOrigem"></canvas></div>
+          </div>
+          <div class="chartcard">
+            <h3>Prioridades estratégicas</h3>
+            <p>Objetivos para os próximos 12 meses.</p>
+            <div class="chartcard__canvas"><canvas id="chPrioridades"></canvas></div>
+          </div>
+          <div class="chartcard">
+            <h3>Maturidade digital por pilar</h3>
+            <p>Distribuição do score nos cinco pilares.</p>
+            <div class="chartcard__canvas"><canvas id="chMaturidade"></canvas></div>
+          </div>
+          <div class="chartcard">
+            <h3>Serviços prioritários para marketing</h3>
+            <p>Serviços indicados como foco das ações.</p>
+            <div class="chartcard__canvas"><canvas id="chServicos"></canvas></div>
+          </div>
+          <div class="chartcard">
+            <h3>Riscos percebidos</h3>
+            <p>Riscos que podem comprometer o crescimento.</p>
+            <div class="chartcard__canvas"><canvas id="chRiscos"></canvas></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="supabase.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

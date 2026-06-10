@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diagnóstico Estratégico · MC Associados</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="brand">
+        <span class="brand__mark">MC</span>
+        <span><span class="brand__name">MC Associados</span><br /><span class="brand__sub">Consultoria Contábil & Tributária</span></span>
+      </a>
+      <nav class="nav__links" id="navLinks">
+        <a href="index.html">Início</a>
+        <a href="formulario.html" class="is-active">Diagnóstico</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="relatorio.html">Relatório</a>
+      </nav>
+      <button class="nav__toggle" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <div class="form-shell">
+
+    <!-- Cabeçalho do formulário -->
+    <div style="text-align:center;margin-bottom:28px">
+      <p class="eyebrow">Levantamento estratégico</p>
+      <h1 style="font-size:34px">Diagnóstico de Marketing & Crescimento</h1>
+      <p style="color:var(--gray-500);max-width:560px;margin:10px auto 0">Responda com a visão mais próxima da realidade atual. Não há respostas certas ou erradas — o objetivo é mapear o ponto de partida.</p>
+    </div>
+
+    <!-- LGPD -->
+    <div class="lgpd">
+      <h4>Uso das informações · LGPD</h4>
+      <p>As informações coletadas serão utilizadas exclusivamente para fins de diagnóstico estratégico, planejamento de marketing digital e desenvolvimento comercial da MC Associados. Os dados não serão utilizados para avaliação individual de desempenho, exposição pública ou qualquer finalidade não autorizada pela diretoria.</p>
+    </div>
+
+    <!-- Progresso -->
+    <div class="progress" id="progress">
+      <div class="progress__bar"><div class="progress__fill" id="progressFill"></div></div>
+      <div class="progress__meta">
+        <span class="progress__step" id="progressStep"></span>
+        <span class="progress__pct" id="progressPct"></span>
+      </div>
+    </div>
+
+    <div class="card" id="formCard" style="padding:34px">
+      <form id="diagnostico" novalidate>
+
+        <!-- ====== BLOCO 1 — POSICIONAMENTO ESTRATÉGICO ====== -->
+        <fieldset class="fblock is-active" data-titulo="Posicionamento Estratégico">
+          <div class="fblock__head">
+            <span class="fblock__tag">Bloco 01 / 08</span>
+            <h2>Posicionamento Estratégico</h2>
+            <p>Identidade, ambição e diferenciais da consultoria.</p>
+          </div>
+
+          <div class="field">
+            <label for="nome">Seu nome <span style="color:var(--danger)">*</span></label>
+            <input class="input" id="nome" name="nome_respondente" required placeholder="Ex.: Mariana Costa" />
+          </div>
+          <div class="field">
+            <label for="cargo">Cargo / função <span style="color:var(--danger)">*</span></label>
+            <input class="input" id="cargo" name="cargo" required placeholder="Ex.: Sócia-diretora" />
+          </div>
+
+          <div class="field">
+            <label for="missao">Qual é a missão da MC Associados?</label>
+            <textarea class="textarea" id="missao" name="missao" placeholder="O propósito central da empresa…"></textarea>
+          </div>
+          <div class="field">
+            <label for="visao">Qual é a visão da empresa para os próximos 3 a 5 anos?</label>
+            <textarea class="textarea" id="visao" name="visao_3_5_anos" placeholder="Onde a empresa quer chegar…"></textarea>
+          </div>
+          <div class="field">
+            <label for="recon">Como a empresa deseja ser reconhecida pelo mercado?</label>
+            <textarea class="textarea" id="recon" name="reconhecimento_mercado" placeholder="A imagem desejada perante clientes e mercado…"></textarea>
+          </div>
+          <div class="field">
+            <label for="dif">Quais são os principais diferenciais competitivos?</label>
+            <textarea class="textarea" id="dif" name="diferenciais_competitivos" placeholder="O que torna a MC Associados diferente…"></textarea>
+          </div>
+        </fieldset>
+
+        <!-- ====== BLOCO 2 — PORTFÓLIO DE SERVIÇOS ====== -->
+        <fieldset class="fblock" data-titulo="Portfólio de Serviços">
+          <div class="fblock__head">
+            <span class="fblock__tag">Bloco 02 / 08</span>
+            <h2>Portfólio de Serviços</h2>
+            <p>Quais serviços existem, quais dão retorno e quais devem crescer.</p>
+          </div>
+
+          <div class="field">
+            <label>Quais serviços são oferecidos atualmente?</label>
+            <span class="hint">Selecione todos que se aplicam.</span>
+            <div class="options" data-multi="servicos_oferecidos"></div>
+          </div>
+          <div class="field">
+            <label>Quais serviços possuem maior rentabilidade?</label>
+            <div class="options" data-multi="servicos_rentaveis"></div>
+          </div>
+          <div class="field">
+            <label>Quais serviços têm maior potencial de crescimento?</label>
+            <div class="options" data-multi="servicos_crescimento"></div>
+          </div>
+          <div class="field">
+            <label>Quais serviços devem ser prioridade nas ações de marketing?</label>
+            <div class="options" data-multi="servicos_prioridade_marketing"></div>
+          </div>
+        </fieldset>
+
+        <!-- ====== BLOCO 3 — CLIENTES E MERCADO ====== -->
+        <fieldset class="fblock" data-titulo="Clientes e Mercado">
+          <div class="fblock__head">
+            <span class="fblock__tag">Bloco 03 / 08</span>
+            <h2>Clientes e Mercado</h2>
+            <p>Quem são os clientes hoje e quem a empresa quer conquistar.</p>
+          </div>
+
+          <div class="field">
+            <label for="qtd">Quantidade aproximada de clientes ativos</label>
+            <select class="input" id="qtd" name="quantidade_clientes">
+              <option value="">Selecione…</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="seg">Quais segmentos representam a maior parte da carteira?</label>
+            <textarea class="textarea" id="seg" name="segmentos_clientes" placeholder="Ex.: comércio, serviços, indústrias…"></textarea>
+          </div>
+          <div class="field">
+            <label for="ideal">Quem é o cliente ideal da MC Associados?</label>
+            <textarea class="textarea" id="ideal" name="cliente_ideal" placeholder="Porte, segmento, perfil de gestão…"></textarea>
+          </div>
+          <div class="field">
+            <label for="dores">Quais são as principais dores e necessidades dos clientes?</label>
+            <textarea class="textarea" id="dores" name="dores_clientes" placeholder="Desafios que os clientes enfrentam…"></textarea>
+          </div>
+          <div class="field">
+            <label for="segdes">Quais segmentos a empresa deseja conquistar nos próximos anos?</label>
+            <textarea class="textarea" id="segdes" name="segmentos_desejados" placeholder="Mercados-alvo de expansão…"></textarea>
+          </div>
+        </fieldset>
+
+        <!-- ====== BLOCO 4 — PROCESSO COMERCIAL ====== -->
+        <fieldset class="fblock" data-titulo="Processo Comercial">
+          <div class="fblock__head">
+            <span class="fblock__tag">Bloco 04 / 08</span>
+            <h2>Processo Comercial</h2>
+            <p>Como a empresa atrai, qualifica e converte clientes.</p>
+          </div>
+
+          <div class="field">
+            <label>Como os clientes chegam atualmente à empresa?</label>
+            <span class="hint">Selecione todos que se aplicam.</span>
+            <div class="options" data-multi="origem_clientes"></div>
+          </div>
+          <div class="field">
+            <label>Existe um processo comercial formalizado?</label>
+            <div class="options" data-radio="processo_comercial" data-opts="Sim,Parcialmente,Não"></div>
+          </div>
+          <div class="field">
+            <label>Existe acompanhamento de funil de vendas?</label>
+            <div class="options" data-radio="funil_vendas" data-opts="Sim,Não"></div>
+          </div>
+          <div class="field">
+            <label for="novos">Quantos novos clientes entram por mês, em média?</label>
+            <input class="input" id="novos" name="novos_clientes_mes" inputmode="numeric" placeholder="Ex.: 8" />
+          </div>
+          <div class="field">
+            <label for="conv">Qual a taxa estimada de conversão de propostas?</label>
+            <input class="input" id="conv" name="taxa_conversao" placeholder="Ex.: 35%" />
+          </div>
+        </fieldset>
+
+        <!-- ====== BLOCO 5 — MARKETING E PRESENÇA DIGITAL ====== -->
+        <fieldset class="fblock" data-titulo="Marketing e Presença Digital">
+          <div class="fblock__head">
+            <span class="fblock__tag">Bloco 05 / 08</span>
+            <h2>Marketing e Presença Digital</h2>
+            <p>Canais, planejamento e resultados das ações atuais.</p>
+          </div>
+
+          <div class="field">
+            <label>Quais canais digitais são utilizados atualmente?</label>
+            <span class="hint">Selecione todos que se aplicam.</span>
+            <div class="options" data-multi="canais_digitais"></div>
+          </div>
+          <div class="field">
+            <label>Existe planejamento de marketing formal?</label>
+            <div class="options" data-radio="planejamento_marketing" data-opts="Sim,Parcialmente,Não"></div>
+          </div>
+          <div class="field">
+            <label>Como a gestão avalia a presença digital da empresa?</label>
+            <span class="hint">Escala de 0 (frágil) a 10 (excelente).</span>
+            <div class="scale" data-scale="nota_presenca_digital"></div>
+          </div>
+          <div class="field">
+            <label>O marketing atual gera resultados mensuráveis?</label>
+            <div class="options" data-radio="resultados_mensuraveis" data-opts="Sim,Parcialmente,Não"></div>
+          </div>
+          <div class="field">
+            <label for="desaf">Quais são os principais desafios atuais de marketing?</label>
+            <textarea class="textarea" id="desaf" name="desafios_marketing" placeholder="Obstáculos percebidos hoje…"></textarea>
+          </div>
+        </fieldset>
+
+        <!-- ====== BLOCO 6 — TECNOLOGIA E INOVAÇÃO ====== -->
+        <fieldset class="fblock" data-titulo="Tecnologia e Inovação">
+          <div class="fblock__head">
+            <span class="fblock__tag">Bloco 06 / 08</span>
+            <h2>Tecnologia e Inovação</h2>
+            <p>Grau de digitalização e abertura para automação e IA.</p>
+          </div>
+
+          <div class="field">
+            <label>Como a gestão avalia a maturidade digital da empresa?</label>
+            <span class="hint">Escala de 0 (inicial) a 10 (avançada).</span>
+            <div class="scale" data-scale="nota_maturidade_digital"></div>
+          </div>
+          <div class="field">
+            <label>A empresa utiliza automações ou Inteligência Artificial?</label>
+            <div class="options" data-radio="usa_ia_automacao" data-opts="Sim,Parcialmente,Não"></div>
+          </div>
+          <div class="field">
+            <label for="autom">Quais processos poderiam ser automatizados?</label>
+            <textarea class="textarea" id="autom" name="processos_automatizar" placeholder="Ex.: onboarding, cobrança, relatórios…"></textarea>
+          </div>
+        </fieldset>
+
+        <!-- ====== BLOCO 7 — OBJETIVOS ESTRATÉGICOS ====== -->
+        <fieldset class="fblock" data-titulo="Objetivos Estratégicos">
+          <div class="fblock__head">
+            <span class="fblock__tag">Bloco 07 / 08</span>
+            <h2>Objetivos Estratégicos</h2>
+            <p>Prioridades, definição de sucesso e riscos do crescimento.</p>
+          </div>
+
+          <div class="field">
+            <label>Quais são as prioridades para os próximos 12 meses?</label>
+            <span class="hint">Selecione todas que se aplicam.</span>
+            <div class="options" data-multi="prioridades_12_meses"></div>
+          </div>
+          <div class="field">
+            <label for="sucesso">Quais resultados seriam considerados sucesso para este projeto?</label>
+            <textarea class="textarea" id="sucesso" name="resultados_sucesso" placeholder="Como você definiria sucesso…"></textarea>
+          </div>
+          <div class="field">
+            <label>Quais riscos podem comprometer o crescimento da empresa?</label>
+            <span class="hint">Selecione os riscos percebidos.</span>
+            <div class="options" data-multi="riscos_crescimento"></div>
+          </div>
+        </fieldset>
+
+        <!-- ====== BLOCO 8 — EXPECTATIVAS DA DIRETORIA ====== -->
+        <fieldset class="fblock" data-titulo="Expectativas da Diretoria">
+          <div class="fblock__head">
+            <span class="fblock__tag">Bloco 08 / 08</span>
+            <h2>Expectativas da Diretoria</h2>
+            <p>O que se espera do projeto e o que será acompanhado.</p>
+          </div>
+
+          <div class="field">
+            <label for="exp">O que a diretoria espera do Projeto de Marketing Digital?</label>
+            <textarea class="textarea" id="exp" name="expectativas_diretoria" placeholder="Expectativas principais…"></textarea>
+          </div>
+          <div class="field">
+            <label for="ind">Quais indicadores a diretoria gostaria de acompanhar mensalmente?</label>
+            <textarea class="textarea" id="ind" name="indicadores_mensais" placeholder="Ex.: leads, conversão, faturamento…"></textarea>
+          </div>
+          <div class="field">
+            <label for="inic">Existe alguma iniciativa que a empresa deseja implementar no futuro?</label>
+            <textarea class="textarea" id="inic" name="iniciativas_futuras" placeholder="Projetos ou ideias para o futuro…"></textarea>
+          </div>
+
+          <div class="consent">
+            <input type="checkbox" id="consent" name="consentimento" required />
+            <label for="consent">Declaro estar ciente de que as informações serão utilizadas para fins estratégicos internos.</label>
+          </div>
+        </fieldset>
+
+        <p class="form-error" id="formError"></p>
+
+        <div class="form-nav">
+          <button type="button" class="btn btn--ghost" id="btnPrev">← Voltar</button>
+          <button type="button" class="btn btn--primary" id="btnNext">Avançar →</button>
+          <button type="submit" class="btn btn--gold" id="btnSubmit" style="display:none">Concluir diagnóstico</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Tela de conclusão -->
+    <div class="done" id="done">
+      <div class="done__ring"><svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+      <h2>Diagnóstico recebido</h2>
+      <p>Obrigado por contribuir. Veja abaixo o índice de maturidade preliminar gerado a partir das suas respostas.</p>
+      <div style="margin:8px 0 26px">
+        <div style="font-family:var(--display);font-size:64px;font-weight:600;color:var(--navy-800);line-height:1" id="doneScore">0</div>
+        <div style="font-weight:600;font-size:18px" id="doneBand">—</div>
+        <div style="color:var(--gray-500);font-size:13px">índice de maturidade · 0 a 100</div>
+      </div>
+      <div class="done__actions">
+        <a href="dashboard.html" class="btn btn--primary">Ver dashboard executivo</a>
+        <a href="relatorio.html" class="btn btn--ghost">Abrir relatório</a>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="supabase.js"></script>
+  <script>
+    /* Geração dinâmica das opções a partir do catálogo OPC (definido em script.js,
+       carregado logo abaixo). Como script.js já roda os módulos, montamos os
+       campos ANTES dele rodar o formModule — por isso este bloco fica inline e
+       é executado na sequência correta carregando o catálogo aqui. */
+  </script>
+  <script>
+    // Catálogo (espelha OPC de script.js) para montar os campos antes da lógica.
+    const _OPC = {
+      servicos: ["Contabilidade","Fiscal","Departamento Pessoal","BPO Financeiro","Planejamento Tributário","Recuperação Tributária","Consultoria Empresarial","Abertura de Empresas","Outros"],
+      origem: ["Indicação","Google","Instagram","LinkedIn","Parceiros","Networking","Outros"],
+      canais: ["Instagram","LinkedIn","Site","Blog","E-mail Marketing","WhatsApp","Google Ads","Meta Ads"],
+      prioridades: ["Crescimento da carteira","Aumento de faturamento","Aumento de rentabilidade","Fortalecimento da marca","Expansão de serviços","Retenção de clientes","Transformação digital"],
+      riscos: ["Concorrência acirrada","Dependência de poucos clientes","Falta de processos","Equipe enxuta","Baixa geração de leads","Pressão de margem","Tecnologia defasada","Rotatividade de clientes"],
+      quantidade: ["Até 50","51 a 100","101 a 250","251 a 500","Acima de 500"],
+    };
+    const _mapa = {
+      servicos_oferecidos:"servicos", servicos_rentaveis:"servicos", servicos_crescimento:"servicos",
+      servicos_prioridade_marketing:"servicos", origem_clientes:"origem", canais_digitais:"canais",
+      prioridades_12_meses:"prioridades", riscos_crescimento:"riscos",
+    };
+    // Multi-select (checkbox em formato de chip)
+    document.querySelectorAll("[data-multi]").forEach((box) => {
+      const name = box.dataset.multi;
+      _OPC[_mapa[name]].forEach((op) => {
+        box.insertAdjacentHTML("beforeend",
+          `<label class="opt opt--check"><input type="checkbox" name="${name}" value="${op}"><span class="opt__dot"></span>${op}</label>`);
+      });
+    });
+    // Radio (chip)
+    document.querySelectorAll("[data-radio]").forEach((box) => {
+      const name = box.dataset.radio;
+      box.dataset.opts.split(",").forEach((op) => {
+        box.insertAdjacentHTML("beforeend",
+          `<label class="opt"><input type="radio" name="${name}" value="${op}"><span class="opt__dot"></span>${op}</label>`);
+      });
+    });
+    // Escala 0–10
+    document.querySelectorAll("[data-scale]").forEach((box) => {
+      const name = box.dataset.scale;
+      box.insertAdjacentHTML("beforeend", `<input type="hidden" name="${name}" value="">`);
+      const row = document.createElement("div"); row.className = "scale__row";
+      for (let i = 0; i <= 10; i++) row.insertAdjacentHTML("beforeend", `<button type="button" class="scale__btn" data-val="${i}">${i}</button>`);
+      box.appendChild(row);
+      box.insertAdjacentHTML("beforeend", `<div class="scale__ends"><span>0 · baixo</span><span>10 · alto</span></div>`);
+    });
+    // Faixas de quantidade de clientes
+    const selQtd = document.getElementById("qtd");
+    _OPC.quantidade.forEach((q) => selQtd.insertAdjacentHTML("beforeend", `<option value="${q}">${q}</option>`));
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

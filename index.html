@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MC Associados · Diagnóstico Estratégico de Marketing Digital</title>
+  <meta name="description" content="Levantamento estratégico para estruturar o Projeto de Marketing Digital e Crescimento Comercial da MC Associados — Consultoria Contábil e Tributária." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="brand">
+        <span class="brand__mark">MC</span>
+        <span>
+          <span class="brand__name">MC Associados</span><br />
+          <span class="brand__sub">Consultoria Contábil & Tributária</span>
+        </span>
+      </a>
+      <nav class="nav__links" id="navLinks">
+        <a href="index.html" class="is-active">Início</a>
+        <a href="formulario.html">Diagnóstico</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="relatorio.html">Relatório</a>
+        <a href="formulario.html" class="btn btn--primary">Iniciar diagnóstico</a>
+      </nav>
+      <button class="nav__toggle" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__grid"></div>
+    <div class="hero__inner">
+      <div class="hero__layout">
+        <div>
+          <p class="eyebrow on-dark">Projeto de Marketing Digital & Crescimento</p>
+          <h1>Onde a sua consultoria <em>realmente</em> está — e para onde pode crescer.</h1>
+          <p class="hero__lead">
+            Um levantamento estratégico, conduzido com sócios e gestores, que traduz a
+            realidade da MC Associados em um diagnóstico claro: maturidade comercial,
+            presença digital e o caminho para o próximo nível de crescimento.
+          </p>
+          <div class="hero__cta">
+            <a href="formulario.html" class="btn btn--gold">Responder diagnóstico</a>
+            <a href="#como" class="btn btn--light">Entender o método</a>
+          </div>
+          <p class="hero__note">⏱ Cerca de 10 minutos · 8 blocos · dados tratados conforme a LGPD</p>
+        </div>
+
+        <!-- Painel assinatura: medidor de maturidade -->
+        <aside class="hero__panel">
+          <h3>Índice de Maturidade</h3>
+          <p>Como o diagnóstico resume a empresa em uma escala de 0 a 100.</p>
+          <div class="gaugewrap"><div id="heroGauge"></div></div>
+          <div class="pillarbars">
+            <div class="pillarbar__row"><span class="pillarbar__name">Estratégia</span><span class="pillarbar__track"><span class="pillarbar__fill" style="width:75%"></span></span><span class="pillarbar__val">75</span></div>
+            <div class="pillarbar__row"><span class="pillarbar__name">Comercial</span><span class="pillarbar__track"><span class="pillarbar__fill" style="width:48%"></span></span><span class="pillarbar__val">48</span></div>
+            <div class="pillarbar__row"><span class="pillarbar__name">Marketing</span><span class="pillarbar__track"><span class="pillarbar__fill" style="width:52%"></span></span><span class="pillarbar__val">52</span></div>
+            <div class="pillarbar__row"><span class="pillarbar__name">Tecnologia</span><span class="pillarbar__track"><span class="pillarbar__fill" style="width:60%"></span></span><span class="pillarbar__val">60</span></div>
+            <div class="pillarbar__row"><span class="pillarbar__name">Inovação</span><span class="pillarbar__track"><span class="pillarbar__fill" style="width:55%"></span></span><span class="pillarbar__val">55</span></div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAIXA DE CONTEXTO -->
+  <div class="stripe">
+    <div class="stripe__inner">
+      <div><div class="stat__num">8</div><div class="stat__lbl">Blocos de levantamento</div></div>
+      <div><div class="stat__num">5</div><div class="stat__lbl">Pilares de maturidade</div></div>
+      <div><div class="stat__num">0–100</div><div class="stat__lbl">Score consolidado</div></div>
+      <div><div class="stat__num">90 dias</div><div class="stat__lbl">Roadmap de ativação</div></div>
+    </div>
+  </div>
+
+  <!-- O QUE AVALIAMOS -->
+  <section class="section" id="o-que">
+    <div class="container">
+      <div class="section__head">
+        <p class="eyebrow">O que o diagnóstico revela</p>
+        <h2>Uma leitura honesta de cada frente do negócio</h2>
+        <p>Cada bloco do formulário alimenta um pilar de maturidade. Juntos, eles mostram onde a empresa já é forte e onde está a maior oportunidade de crescimento.</p>
+      </div>
+      <div class="grid-3">
+        <article class="card card--hover">
+          <div class="card__icon">◆</div>
+          <h3>Posicionamento</h3>
+          <p>Missão, visão, diferenciais e como a MC Associados quer ser reconhecida no mercado.</p>
+        </article>
+        <article class="card card--hover">
+          <div class="card__icon">▲</div>
+          <h3>Portfólio & clientes</h3>
+          <p>Serviços rentáveis, potencial de crescimento e o perfil do cliente ideal.</p>
+        </article>
+        <article class="card card--hover">
+          <div class="card__icon">●</div>
+          <h3>Comercial</h3>
+          <p>Origem dos clientes, processo de vendas, funil e taxa de conversão de propostas.</p>
+        </article>
+        <article class="card card--hover">
+          <div class="card__icon">✦</div>
+          <h3>Marketing digital</h3>
+          <p>Canais ativos, planejamento, presença online e resultados mensuráveis.</p>
+        </article>
+        <article class="card card--hover">
+          <div class="card__icon">⬡</div>
+          <h3>Tecnologia & IA</h3>
+          <p>Maturidade digital, uso de automações e processos com potencial de automação.</p>
+        </article>
+        <article class="card card--hover">
+          <div class="card__icon">➜</div>
+          <h3>Objetivos & expectativas</h3>
+          <p>Prioridades dos próximos 12 meses, riscos e o que a diretoria espera acompanhar.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section class="section section--tint" id="como">
+    <div class="container">
+      <div class="section__head">
+        <p class="eyebrow">Como funciona</p>
+        <h2>Do levantamento ao plano de ação</h2>
+        <p>Um fluxo simples e objetivo, pensado para a rotina de sócios e gestores.</p>
+      </div>
+      <div class="steps">
+        <div class="step"><span class="step__num">01</span><h3>Responder</h3><p>Sócios e gestores preenchem os 8 blocos estratégicos do formulário.</p></div>
+        <div class="step"><span class="step__num">02</span><h3>Consolidar</h3><p>As respostas são armazenadas e convertidas no score de maturidade.</p></div>
+        <div class="step"><span class="step__num">03</span><h3>Analisar</h3><p>O dashboard executivo cruza indicadores e gráficos por pilar.</p></div>
+        <div class="step"><span class="step__num">04</span><h3>Decidir</h3><p>O relatório entrega diagnóstico, recomendações e roadmaps de 90 dias e 12 meses.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-band">
+        <h2>Pronto para mapear o crescimento da MC Associados?</h2>
+        <p>O preenchimento leva cerca de 10 minutos e gera, ao final, um índice de maturidade imediato.</p>
+        <a href="formulario.html" class="btn btn--gold">Começar agora</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div>
+        <div class="brand" style="margin-bottom:12px">
+          <span class="brand__mark">MC</span>
+          <span class="brand__name" style="color:#fff">MC Associados</span>
+        </div>
+        <p class="footer__legal">
+          As informações coletadas neste diagnóstico são de uso interno e estratégico,
+          tratadas conforme a Lei Geral de Proteção de Dados (LGPD).
+        </p>
+      </div>
+      <nav style="display:flex;gap:22px;flex-wrap:wrap">
+        <a href="formulario.html">Diagnóstico</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="relatorio.html">Relatório</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="supabase.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

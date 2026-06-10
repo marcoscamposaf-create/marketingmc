@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Relatório de Diagnóstico · MC Associados</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="nav no-print">
+    <div class="nav__inner">
+      <a href="index.html" class="brand">
+        <span class="brand__mark">MC</span>
+        <span><span class="brand__name">MC Associados</span><br /><span class="brand__sub">Consultoria Contábil & Tributária</span></span>
+      </a>
+      <nav class="nav__links" id="navLinks">
+        <a href="index.html">Início</a>
+        <a href="formulario.html">Diagnóstico</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="relatorio.html" class="is-active">Relatório</a>
+      </nav>
+      <button class="nav__toggle" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <div id="reportRoot">
+    <div class="report">
+
+      <!-- Estado vazio -->
+      <div class="empty" id="reportEmpty" style="display:none">
+        <h2>Sem dados para o relatório</h2>
+        <p>Preencha ao menos um diagnóstico para gerar o documento consolidado.</p>
+        <p style="margin-top:18px"><a href="formulario.html" class="btn btn--primary">Preencher diagnóstico</a></p>
+      </div>
+
+      <div id="reportContent">
+        <!-- Barra de ação -->
+        <div class="report__actions no-print" style="display:flex;justify-content:space-between;gap:14px;align-items:center;margin-bottom:20px;flex-wrap:wrap">
+          <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+            <label style="font-size:13.5px;color:var(--gray-500);font-weight:600">Recorte</label>
+            <select class="input" id="repSelect" style="width:auto"></select>
+          </div>
+          <button class="btn btn--primary" onclick="window.print()">Exportar / Imprimir PDF</button>
+        </div>
+
+        <!-- Documento -->
+        <article class="report__doc">
+          <header class="report__masthead">
+            <div>
+              <p class="eyebrow on-dark">Relatório de Diagnóstico Estratégico</p>
+              <h1>Marketing Digital & Crescimento Comercial</h1>
+              <p id="repMeta">—</p>
+            </div>
+            <div class="report__seal">
+              <div class="report__score-big" id="repScore">0</div>
+              <div class="report__score-lbl">Índice de maturidade</div>
+              <div style="margin-top:8px;font-weight:600" id="repBand">—</div>
+            </div>
+          </header>
+
+          <div class="report__body">
+
+            <section class="rsection">
+              <span class="rsection__tag">01 · Resumo executivo</span>
+              <h2>Onde a empresa está hoje</h2>
+              <p id="repResumo">—</p>
+              <div class="pillars" id="repPilares" style="margin-top:22px"></div>
+            </section>
+
+            <section class="rsection">
+              <span class="rsection__tag">02 · Oportunidades</span>
+              <h2>Principais oportunidades</h2>
+              <ul id="repOport"></ul>
+            </section>
+
+            <section class="rsection">
+              <span class="rsection__tag">03 · Gargalos</span>
+              <h2>Principais gargalos</h2>
+              <ul id="repGargalos"></ul>
+            </section>
+
+            <section class="rsection">
+              <span class="rsection__tag">04 · Portfólio</span>
+              <h2>Serviços com maior potencial</h2>
+              <ul id="repServicos"></ul>
+            </section>
+
+            <section class="rsection">
+              <span class="rsection__tag">05 · Recomendações</span>
+              <h2>Recomendações estratégicas</h2>
+              <ul id="repRecs"></ul>
+            </section>
+
+            <section class="rsection">
+              <span class="rsection__tag">06 · Ativação</span>
+              <h2>Próximos passos</h2>
+              <ul id="repPassos"></ul>
+            </section>
+
+            <section class="rsection">
+              <span class="rsection__tag">07 · Roadmap</span>
+              <h2>Plano de execução</h2>
+              <div class="roadmap" style="margin-top:8px">
+                <div class="rmcol">
+                  <h3>Roadmap <span class="pill">90 dias</span></h3>
+                  <div id="rm90"></div>
+                </div>
+                <div class="rmcol">
+                  <h3>Roadmap <span class="pill">12 meses</span></h3>
+                  <div id="rm12"></div>
+                </div>
+              </div>
+            </section>
+
+            <p style="margin-top:26px;font-size:12.5px;color:var(--gray-400);border-top:1px solid var(--gray-200);padding-top:18px">
+              Documento de uso interno · MC Associados — Consultoria Contábil e Tributária.
+              Informações tratadas conforme a LGPD e destinadas exclusivamente ao planejamento estratégico.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+
+  <script src="supabase.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

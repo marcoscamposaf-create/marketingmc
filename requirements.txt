@@ -1,0 +1,4 @@
+streamlit==1.31.1
+plotly==5.18.0
+# Nota: Removemos pandas para evitar erro de compilacao no Windows
+# A aplicacao funciona sem pandas (usa estruturas Python nativas)
