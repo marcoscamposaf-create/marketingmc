@@ -264,10 +264,10 @@ elif page == "📋 Diagnóstico":
     st.markdown("### 1️⃣ Posicionamento Estratégico")
     form_data["nome_respondente"] = st.text_input("Seu nome *", value=form_data.get("nome_respondente", ""))
     form_data["cargo"] = st.text_input("Cargo / função *", value=form_data.get("cargo", ""))
-    form_data["missao"] = st.text_area("Qual é a missão da MC Associados?", value=form_data.get("missao", ""), height=80)
-    form_data["visao_3_5_anos"] = st.text_area("Visão para os próximos 3 a 5 anos?", value=form_data.get("visao_3_5_anos", ""), height=80)
-    form_data["reconhecimento_mercado"] = st.text_area("Como deseja ser reconhecida?", value=form_data.get("reconhecimento_mercado", ""), height=80)
-    form_data["diferenciais_competitivos"] = st.text_area("Principais diferenciais competitivos", value=form_data.get("diferenciais_competitivos", ""), height=80)
+    form_data["missao"] = st.text_area("Qual é a missão da MC Associados?", value=form_data.get("missao", ""), height=100)
+    form_data["visao_3_5_anos"] = st.text_area("Visão para os próximos 3 a 5 anos?", value=form_data.get("visao_3_5_anos", ""), height=100)
+    form_data["reconhecimento_mercado"] = st.text_area("Como deseja ser reconhecida?", value=form_data.get("reconhecimento_mercado", ""), height=100)
+    form_data["diferenciais_competitivos"] = st.text_area("Principais diferenciais competitivos", value=form_data.get("diferenciais_competitivos", ""), height=100)
     
     # ---- BLOCO 2 ----
     st.markdown("### 2️⃣ Portfólio de Serviços")
@@ -369,7 +369,7 @@ elif page == "📋 Diagnóstico":
         OPC["prioridades"],
         default=form_data.get("prioridades_12_meses", [])
     )
-    form_data["resultados_sucesso"] = st.text_area("Como definiria sucesso?", value=form_data.get("resultados_sucesso", ""), height=60)
+    form_data["resultados_sucesso"] = st.text_area("Como definiria sucesso?", value=form_data.get("resultados_sucesso", ""), height=100)
     form_data["riscos_crescimento"] = st.multiselect(
         "Riscos que podem comprometer o crescimento",
         OPC["riscos"],
@@ -378,9 +378,9 @@ elif page == "📋 Diagnóstico":
     
     # ---- BLOCO 8 ----
     st.markdown("### 8️⃣ Expectativas da Diretoria")
-    form_data["expectativas_diretoria"] = st.text_area("O que espera do Projeto de Marketing Digital?", value=form_data.get("expectativas_diretoria", ""), height=60)
-    form_data["indicadores_mensais"] = st.text_area("Quais indicadores acompanhar mensalmente?", value=form_data.get("indicadores_mensais", ""), height=60)
-    form_data["iniciativas_futuras"] = st.text_area("Alguma iniciativa para o futuro?", value=form_data.get("iniciativas_futuras", ""), height=60)
+    form_data["expectativas_diretoria"] = st.text_area("O que espera do Projeto de Marketing Digital?", value=form_data.get("expectativas_diretoria", ""), height=100)
+    form_data["indicadores_mensais"] = st.text_area("Quais indicadores acompanhar mensalmente?", value=form_data.get("indicadores_mensais", ""), height=100)
+    form_data["iniciativas_futuras"] = st.text_area("Alguma iniciativa para o futuro?", value=form_data.get("iniciativas_futuras", ""), height=100)
     
     # Consentimento
     consent = st.checkbox("Declaro estar ciente de que as informações serão utilizadas para fins estratégicos internos.", value=False)
