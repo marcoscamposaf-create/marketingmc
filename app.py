@@ -299,10 +299,10 @@ elif page == "📋 Diagnóstico":
         [""] + OPC["quantidade"],
         index=OPC["quantidade"].index(form_data.get("quantidade_clientes", "")) + 1 if form_data.get("quantidade_clientes") in OPC["quantidade"] else 0
     )
-    form_data["segmentos_clientes"] = st.text_area("Segmentos que representam a maior parte da carteira", value=form_data.get("segmentos_clientes", ""), height=60)
-    form_data["cliente_ideal"] = st.text_area("Quem é o cliente ideal?", value=form_data.get("cliente_ideal", ""), height=60)
-    form_data["dores_clientes"] = st.text_area("Principais dores dos clientes", value=form_data.get("dores_clientes", ""), height=60)
-    form_data["segmentos_desejados"] = st.text_area("Segmentos que deseja conquistar", value=form_data.get("segmentos_desejados", ""), height=60)
+    form_data["segmentos_clientes"] = st.text_area("Segmentos que representam a maior parte da carteira", value=form_data.get("segmentos_clientes", ""), height=100)
+    form_data["cliente_ideal"] = st.text_area("Quem é o cliente ideal?", value=form_data.get("cliente_ideal", ""), height=100)
+    form_data["dores_clientes"] = st.text_area("Principais dores dos clientes", value=form_data.get("dores_clientes", ""), height=100)
+    form_data["segmentos_desejados"] = st.text_area("Segmentos que deseja conquistar", value=form_data.get("segmentos_desejados", ""), height=100)
     
     # ---- BLOCO 4 ----
     st.markdown("### 4️⃣ Processo Comercial")
